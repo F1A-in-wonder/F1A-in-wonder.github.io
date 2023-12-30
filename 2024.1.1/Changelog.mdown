@@ -1,0 +1,147 @@
+1.7 / 2011-08-31
+================
+
+  * [FIXED] Pages » Duplicate Current now works properly in Fireworks CS4 and up.
+  * [FIXED] Respect antialias type in objects when applying Plastic effect.
+  * [FIXED] Export bug for documents saved in a folder whose name contains the document name (i.e: Foo Bar/Foo.png)
+  * [FIXED] Better prompts in size and position commands
+  * [FIXED] Color » Fill Color now works with Autoshapes
+  * [FIXED] Color » Fill Color now respects existing effects in symbols
+
+  * [NEW] Alpha » Stroke Alpha commands
+  * [NEW] Copy color to clipboard when using the Color commands
+  * [NEW] Effects » Background Rectangle, as requested by @superfetz
+  * [NEW] Effects » Fake Border
+  * [NEW] Effects » Fake Border Inside
+  * [NEW] Export » All Pages as PSD in
+  * [NEW] Export » All Pages as PNG 24 with Prefix
+  * [NEW] Text » Autokern Toggle
+  * [NEW] Grids » Baseline
+  * [NEW] Guides » Copy from Master Page
+  * [NEW] Layers » Unlock All
+  * [NEW] Pages » DeNumberize command
+  * [NEW] Pages » Go To Master Page. It acts as a toggle: run it when in a page and it takes you to the master page. Run it again in the master page, and it takes you back to the page you were in before running the command for the first time.
+  * [NEW] Export Settings » Set PNG 32 for All Pages
+  * [NEW] Text » Fix Faux Bolds
+
+
+## 1.6.7 - 2010-12-31
+- ad9d6d1372 (New command: Position » Swap)
+- ab894c3981 (FIXED: Position commands do not work properly for objects with border)
+- 0148a5ed55 (New feature: vertical size commands now modify line-height when applied to text boxes)
+- 3f2fdb7733 (Fix bitmap object positioning bug)
+- 8cc43296bd (Properly restore selections when you are editing groups.)
+
+## 1.6.6 - 2010-12-10
+- Fixed a bug where Orange Commands wouldn't work properly when installed along other extensions.
+
+## 1.6.5 - 2010-11-10
+- 62300167fe (Fixed a nasty bug, reported by @nachogil that happened when resizing items inside groups.)
+- 51a672b5d4 (FIXED: Pages » Numberize was numbering in reverse order. Fix by @inefable)
+- Better tests, so things won't break so much in the future
+
+## 1.6.4 - 2010-11-04
+- Massive rewrite, with focus on performance (keyboard resize commands are much faster now)
+- eba55c4f95 (FIX: Support CS5's 'exact' roundness in Properties » Set Rectangle Roundness in Pixels)
+- 15ec6bcee1 (Use current roundness in Set Rectangle Roundness prompt.)
+- bafac75f39 (NEW: Export » All Documents as JPG in…)
+- f51f054b81 (Add '(copy)' to duplicated pages via Pages » Duplicate Current command. Also, make the duplicated page current, as that is the most probable thing you'd want to do after duplicating a page.)
+- 43f124410a (New About box)
+
+## 1.6 - 2010-10-04
+- 9ea3e0e654 (New command: Export » Slices as CSS Sprite.)
+
+## 1.5 - 2010-05-11
+- 88ba03453c (New command: Effects » Safe Flatten.)
+- bcd5c60404 (Initial support for Fireworks CS5)
+
+## 1.4.13 - 2010-03-25
+- 1505f2ab9e (Don't export master page when running "Export » All Pages as..." commands)
+- c1289f8909 (New commands: Scale to Height and Scale to Width, to resize objects proportionally.)
+- fb60e8247a (New commands: Scale to 16/9 and Scale to 4/3. They change the selected object(s) height to make then have a 16:9 or 4:3 aspect ratio.)
+
+## 1.4.12 - 2010-02-22
+- 056f1fbd0b (Added 'Align » Center on Canvas...' commands.)
+- API: Selection.each now accepts a second parameter to specify if groups should be traversed (Orange Commands default) or should be treated as one object (Fireworks default).
+
+## 1.4.11 - 2010-02-19
+- afbee6d615 (Added Canvas commands for http://intemperie.me)
+- 40b7aa91d7 (Added Effects » Plastic command)
+
+## 1.4.10 - 2010-01-21
+- e6b9f81487 (Fixed a fantabulous bug with the Page » Vertical Trim commands. Feel free to check the diff for some deep insight on the issue.)
+
+## 1.4.9 - 2010-01-17
+- 126c536259 (Don't add a number to the Master Page, as it is not needed 99% of the time.)
+- 8f90caecf2 (NEW: Text » Verdanize Selection)
+- 349c217a15 (NEW: Text » Bulletize and Text » Bulletize with... commands)
+
+## 1.4.8 - 2009-12-04
+- 5e1c0e02be (Added "Guide » Copy" and "Guide » Paste")
+
+## 1.4.7 - 2009-11-25
+- 020fa0d31a (NEW: Repeat Vertical and Horizontal commands.)
+
+## 1.4.6 - 2009-11-24
+- aed95b277d (This will hopefully fix a bug that occurs when resizing objects via keyboard, where random objects would be added to the selection (and thus resized).)
+- 5be6564c8a (Do not antialias text when Arializing)
+
+## 1.4.5 - 2009-11-19
+- 4b16e9f69b (FIXED: Don't add commands without a shortcut to the shortcuts file (doh!))
+
+## 1.4.4 - 2009-11-13
+- 240d7f05fe (NEW: Space Horizontal and Vertical commands, to distribute objects using a fixed distance.)
+
+## 1.4.3 - 2009-11-02
+- f5d96d8c8a (NEW: Pages » Sort Command)
+- 34495ef440 (API: Added page number parameter to Pages.each callback)
+- 438787d323 (API: Added Number.times() function.)
+
+## 1.4.2 - 2009-10-30
+- 5e6f548da1 (NEW: Lightbox effect (requested by @kekoponte))
+- 7bdaeb11b2 (NEW: Added two new commands to export current page and export all pages that ask you for the file location (requested by @plumilla))
+- 3177531edf (NEW: Command to add a number in front of the page name, according to its order in the page panel.)
+
+## 1.4.1 - 2009-10-29
+- 0b283de113 (Added missing documentation)
+- 3210ae8c3d (Fixed a small omission in the Export commands: the file need to be saved before exporting pages. Now, a friendly reminder is displayed when you try to run the commands on an unsaved document :))
+- 901c4e157e (Use Page.vertical_trim for Page trim commands. Fixes a bug when trimming pages with locked objects)
+
+## 1.4.0 - 2009-10-28
+- a64e4ed152 (Updated documentation system)
+
+## 1.3.6
+- 0d6274cf62 (Added support for Symbol instances in Color » Fill Color command. Symbols are colored by using a Color Fill effect.)
+- 62d4226aba (FIXED: "Color » Fill Color" didn't work when the current selection's fill was set to 'None')
+- f63bc11cbd (Nicer docs: Documented the Text » Disable Antialias command and corrected the Export » All Pages as PNG 24 command)
+
+## 1.3.5
+- "Pages » Vertical Trim" command
+- "Pages » Vertical Trim All Pages" command
+- "Text » Join"
+- "Text » Join with..."
+- Fixed: "Export » All Pages..." now works when the document filename has spaces.
+- API:
+  - Added `Pages.each()` function
+  - Added `Document.path()` function
+  - Added `Document.export_in(path)` function
+  - Added `Array.each()`
+  - Added `Document.set_export_as_png_24()`
+
+## 1.3.4
+- Added "Export » All Pages as PNG 24" command
+
+## 1.3.3
+
+- Fixed a nasty bug with multiselection resizes.
+- Added "Set Page Name" command.
+- Files in "Export » Current Page as PNG 24" are saved in the same folder as the original PNG file, using the page name as suffix.
+- 32665a05cd (Fixes a weird bug that happened when resizing single objects after resizing groups. It's hard to explain it writing, but it sucked :P)
+
+## 1.3.1
+- 7631336efd (Bugfix: pressing 'Esc' to dismiss the Set Size prompt no longer throws an error.)
+- 0bdfbfc304 (Added 'Set Page Name' command, because I *hate* writing on the Pages panel.)
+- ed4d50c7cb (Store exported flat files in the same folder as the source PNG files.)
+
+## 1.3
+- Released in sofanaranja.com
