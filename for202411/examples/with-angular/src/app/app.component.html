@@ -1,0 +1,5 @@
+<div style="position: absolute; z-index: 999;">
+  <button (click)="toggleFireworks()">{{ enabled ? 'Mounted' : 'Unmounted' }}</button>
+  <button (click)="waitStop()">waitStop</button>
+</div>
+<ng-fireworks #fireworks="ngFireworks" [options]="options" class="fireworks" *ngIf="enabled"></ng-fireworks>
